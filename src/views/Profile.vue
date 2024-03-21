@@ -11,7 +11,7 @@
       <div class="col-md text-center text-md-left">
         <h2>{{ user?.name }}</h2>
         <p class="lead text-muted">{{ user?.email }}</p>
-        <p class="lead text-muted">{{ user?.email }}</p>
+        <p class="lead text-muted">{{ access_token }}</p>
       </div>
     </div>
 
