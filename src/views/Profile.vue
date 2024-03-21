@@ -28,13 +28,19 @@ export default {
   name: "profile-view",
   setup() {
     const auth0 = useAuth0();
-    
+    const token = async() => {
+      const auth0 = useAuth0();
+      const token = await auth0.getAccessTokenSilently();
+      console.log(token);
+      return token
+    }
 
     return {
       user: auth0.user,
-      access_token: auth0.getAccessTokenSilently,
+      access_token: token,
     }
-  }
+  },
+
 };
 </script>
 
