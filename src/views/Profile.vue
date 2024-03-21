@@ -11,6 +11,7 @@
       <div class="col-md text-center text-md-left">
         <h2>{{ user?.name }}</h2>
         <p class="lead text-muted">{{ user?.email }}</p>
+        <p class="lead text-muted">{{ user?.email }}</p>
       </div>
     </div>
 
@@ -28,8 +29,10 @@ export default {
   setup() {
     const auth0 = useAuth0();
     
+
     return {
       user: auth0.user,
+      access_token: auth0.getAccessTokenSilently,
     }
   }
 };
